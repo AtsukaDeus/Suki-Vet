@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+{% if encontrado == 1 %}
+<table class="table table-light" style="width: 100%; margin: 0%; margin-top: 0%;">
+    <thead>
+        <tr>
+            <th>RUN Tutor</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Peso</th>
+            <th>Especie</th>
+            <th>Ver/Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for paciente in pacientes.values %}
+    <tr class="table-info">
+        <td>{{paciente.rut_tutor_id}}</td>
+        <td>{{paciente.nombre_paciente}}</td>
+        <td>{{paciente.sexo}}</td>
+        <td>{{paciente.peso}} kg</td>
+        <td>{{paciente.especie}}</td>
+        <td><a href="editar_paciente/{{paciente.id}}" type="button"><img width="30px" height="30px" src="{% static 'img/icon_doc.png' %}" ></a></td>
+    </tr>
+{% endfor %}
+    </tbody>        
+</table>
+
+
+{% elif encontrado == 0 and rut_tutor != True %}
+<div class="alert alert-danger" role="alert">
+    <strong>Ups!</strong> El RUT ingresado no tiene un paciente asociado.
+</div>
+{% endif %}
+
+
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends "ingreso_paciente/base.html" %}
+
+
+{% block contenido %}
+
+{% if paciente_form.errors or direccion_form.errors or tutor_form.errors %}
+    <div class="alert alert-danger" role="alert" style="margin-top: 73px;">
+        <strong>Algo salió mal!</strong> Verifica que los campos estén escritos correctamente y vuelve a intentarlo.
+    </div>
+{% endif %}
+
+<div class="cont_paciente">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="seccion">
+                    <h4 class="h4-titulos">Dirección:</h4>
+                    {{ direccion_form }}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seccion">
+                    <h4 class="h4-titulos">Tutor:</h4>
+                    Rut: {{ tutor_form.rut }}
+                    Nombre tutor: {{ tutor_form.nombre_tutor }}
+                    Telefono: {{ tutor_form.telefono }}
+                    Email: {{ tutor_form.email }}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seccion">
+                    <h4 class="h4-titulos">Paciente:</h4>
+                    Nombre Paciente: {{ paciente_form.nombre_paciente }}
+                    Edad: {{ paciente_form.edad }}
+                    Peso: {{ paciente_form.peso }}
+                    Sexo: {{ paciente_form.sexo }}
+                    Esterilizado: {{ paciente_form.esterilizado }}
+                    Especie: {{ paciente_form.especie }}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="h4-titulos" style="margin-left: 3%; margin-bottom: 0%;">Elementos adicionales paciente:</h4>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seccion">
+                    Patologías: {{ paciente_form.patologias }}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="seccion">
+                    Comentarios: {{ paciente_form.comentarios }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-enviar-form col-md-12">
+                <button type="submit" class="btn btn-primary">Confirmar Datos</button>
+                <a href="{% url 'index' %}" type="button" class="btn btn-danger">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock contenido %}
