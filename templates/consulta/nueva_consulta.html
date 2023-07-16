@@ -1,0 +1,78 @@
+{% extends "consulta/base.html" %}
+
+
+
+{% block contenido %}
+
+{% if paciente_form.errors or direccion_form.errors or tutor_form.errors %}
+    <div class="alert alert-danger" role="alert" style="margin-top: 73px;">
+        <strong>Algo salió mal!</strong> Verifica que los campos estén escritos correctamente y vuelve a intentarlo.
+    </div>
+{% endif %}
+
+<div class="cont-consulta">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="seccion-consulta">
+                <div class="col-md-2">
+                    Fecha consulta {{ consulta_form.fecha_consulta }}
+                </div>
+            </div>
+            <div class="seccion-consulta">
+                <div class="col-md-12">
+                    Motivo consulta {{ consulta_form.motivo_consulta }}
+                </div>  
+            </div>
+            <div class="seccion-consulta">
+                <div class="row">
+                    <div class="col-md-6">
+                        Evaluación general {{ consulta_form.evaluacion_general }}
+                    </div>
+                    <div class="col-md-3">
+                        Nutrición {{ consulta_form.nutricion }}
+                        <div class="seccion-consulta">
+                            Parametros Fisiológicos {{ consulta_form.fc }}
+                            {{ consulta_form.fr }}
+                            {{ consulta_form.pc }}
+                            {{ consulta_form.tllc }}
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="seccion-consulta">
+                            <p>Color Mucosa</p> {{ consulta_form.color_mucosa }}
+                        </div>
+                        <div class="seccion-consulta">
+                            <p>Húmedad Mucosa</p> {{ consulta_form.humedad_mucosa }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seccion-consulta" style="margin-top: 30px;">
+                <div class="row">
+                    <div class="col-md-4">
+                        Evaluación de los ganglios linfáticos {{ consulta_form.ev_gang_linf }}
+                    </div>
+                    <div class="col-md-4">
+                        Comentarios adicionales {{ consulta_form.comentarios }}
+                    </div>
+                    <div class="col-md-4">
+                        Diagnóstico {{ consulta_form.diagnostico }}
+                    </div>
+                </div>
+            </div>
+            <div class="seccion-consulta">
+                <div class="row">
+                    <div class="col-md-7">
+                        Receta {{ consulta_form.receta }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-top: 20px;"> 
+                <button type="submit" class="btn btn-primary">Registrar Consulta</button>
+                <a style="margin-left: 10px;" href="{% url 'mostrar_pacientes' %}" type="button" class="btn btn-danger">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock contenido %}

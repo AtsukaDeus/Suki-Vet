@@ -1,0 +1,127 @@
+body {
+    background-color: #52dbc7; color: #000000a6; font-size: 17px; font-family: cursive;
+}
+
+.table{
+    width: 86%;
+    margin-left: 7%;
+    margin-top: 2%;
+}
+
+.nav-link{
+    border-radius: 5px;
+    background-color: #6df6ef;
+    border: 1.6px solid #0000008f;
+}
+
+.a_edit:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar{
+    background-color: transparent;
+    padding-right: 70px;
+    padding-left: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+    background-color: #61ddbe;
+    
+}
+
+.nav-item{
+    padding-right: 25px;
+    font-size: 20px;
+}
+
+.navbar-brand{
+    padding-right: 50px;
+    font-size: 30px;
+}
+.dropdown-menu{
+    --bs-dropdown-link-active-color: #000;
+    --bs-dropdown-link-active-bg: #ffffff00;
+}
+
+.table-info{
+    --bs-table-bg: #91deeede;
+}
+
+.block_pacientes {
+    background-color: rgb(119 184 195 / 49%);
+    height: 77vh;
+    width: 93%;
+    margin-top: 113px;
+    margin-left: 3%;
+    margin-right: 10%;  
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* navbar animation */
+.hidden-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+/* -------------------- */
+
+
+/* Arreglando el max width de la página */
+.container {
+    max-width: 100%;
+    margin-bottom: 5%;
+    padding: 0px;
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+    .container {
+        max-width: 740px;
+    }
+
+    .block_pacientes{
+        width: 91%;
+        margin-left: 4%;
+    }
+
+    .block-form-ingresar-paciente{
+        height: 400%;
+    }
+
+    
+
+}
+
+/* Estilos para teléfonos móviles */
+@media (max-width: 480px) {
+    .container {
+        max-width: 450px;
+    }
+
+    .block_pacientes{
+        width: 91%;
+        margin-left: 4%;
+    }
+
+    
+}
+
+.btn-nueva-consulta{
+    display: block;
+    width: 135px;
+    height: 33px;
+    background-color: #61ddbe;
+    padding: 4px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #101010;
+    border: 1.6px solid #0000008f;
+}
+
+.btn-nueva-consulta:hover{
+    background-color: #5ec5ab;
+    
+}

@@ -1,0 +1,30 @@
+
+.cont-consulta{
+    margin-top: 100px;
+    margin-left: 1%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    background-color: #68ecb8ed;;
+    margin-right: 1%;
+    border-radius: 10px;
+}
+
+.seccion-consulta{
+    margin-top: 10px;
+    width: 95%;
+}
+
+.form-control{
+    margin-top: 10px;
+}
+
+.form-select{
+    margin-top: 10px;
+}
+
+textarea{
+    resize: none;
+}
+

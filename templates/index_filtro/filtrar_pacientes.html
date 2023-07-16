@@ -12,6 +12,7 @@
             <th>Peso</th>
             <th>Especie</th>
             <th>Ver/Editar</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
         <td>{{paciente.peso}} kg</td>
         <td>{{paciente.especie}}</td>
         <td><a href="editar_paciente/{{paciente.id}}" type="button"><img width="30px" height="30px" src="{% static 'img/icon_doc.png' %}" ></a></td>
+        <td><a href="nueva_consulta/{{paciente.id}}" type="buttom" class="btn-nueva-consulta">Nueva Consulta</a></td>
     </tr>
 {% endfor %}
     </tbody>        

@@ -1,0 +1,97 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* overflow: hidden; */
+    overscroll-behavior: none;
+}
+
+.btn{
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+.cont_paciente{
+    margin-top: 115px;
+    height: 93%;
+    width: 93%;
+    margin-left: 2%;
+    background-color: #9ad0f3ed;
+    padding-right: 8%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+
+.form-pacientes{
+    height: 100%;
+
+}
+
+.seccion{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+
+.form-control{
+    margin-bottom: 6%;
+}
+
+#id_sexo{
+    margin-bottom: 10%;
+}
+
+#id_esterilizado{
+    margin-bottom: 10%;
+}
+
+#id_vacunas{
+    resize: none;
+    height: 20%;
+}
+
+#id_histo_med{
+    resize: none;
+}
+
+#id_comentarios{   
+    resize: none;
+}
+
+.form-select{
+    margin-bottom: 6%;
+}
+
+.h4-titulos{
+    margin-bottom: 5%;
+    color:#00000087;;
+}
+
+
+
+@media (max-width: 768px) {
+    .cont_paciente{
+        height: 96%;
+        width: 88%;
+        margin-left: 5%;
+    }
+
+    .btn{
+        margin-left: 10%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .cont_paciente{
+        height: 97%;
+        width: 88%;
+        margin-left: 5%;
+    }
+
+
+
+    
+}

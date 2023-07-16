@@ -35,7 +35,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Vet_APP',
+    'gestion_pacientes',
+    'admin_app',
+    'consulta_app',
+    
 ]
 
 MIDDLEWARE = [
