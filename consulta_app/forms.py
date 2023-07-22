@@ -27,5 +27,3 @@ class ConsultaForm(ModelForm):
     class Meta:
         model = Consulta
         fields = ('fecha_consulta','motivo_consulta','evaluacion_general','nutricion','fc','fr','pc','tllc','color_mucosa','humedad_mucosa','ev_gang_linf','comentarios','diagnostico','receta',)
-        
-        

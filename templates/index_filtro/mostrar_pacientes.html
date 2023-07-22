@@ -11,7 +11,7 @@
             <th>Peso</th>
             <th>Especie</th>
             <th>Ver/Editar</th>
-            <th></th>
+            <th>Consulta</th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +23,14 @@
         <td>{{paciente.peso}} kg</td>
         <td>{{paciente.especie}}</td>
         <td><a href="editar_paciente/{{paciente.id}}" type="button"><img width="30px" height="30px" src="{% static 'img/icon_doc.png' %}" ></a></td>
-        <td><a href="nueva_consulta/{{paciente.id}}" type="buttom" class="btn-nueva-consulta">Nueva Consulta</a></td>
+        <td style="width: 260px;">
+            <div class="div-consulta-opciones">
+                <a href="nueva_consulta/{{paciente.id}}" type="buttom" class="btn-nueva-consulta">Nueva</a>
+                <a href="historial_consulta/{{paciente.id}}" type="buttom" class="btn-historial-consulta">Historial</a>
+            </div>
+        </td>
     </tr>
+    
 {% endfor %}
     </tbody>        
 </table>

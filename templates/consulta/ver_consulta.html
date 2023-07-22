@@ -1,5 +1,7 @@
 {% extends "consulta/base.html" %}
 
+{% block volver %}<a style="margin-left: 10px; pointer-events: all;" onclick="window.history.back()" type="button" class="btn-volver">Volver</a>{% endblock volver %}
+
 {% block contenido %}
 
 {% if paciente_form.errors or direccion_form.errors or tutor_form.errors %}
@@ -8,13 +10,13 @@
     </div>
 {% endif %}
 
-<div class="cont-consulta">
-    <form method="POST">
+<div class="cont-consulta" style="pointer-events: none;">
+    <form>
         {% csrf_token %}
         <div class="row">
             <div class="seccion-consulta">
-                <div class="col-md-2">
-                    Fecha consulta {{ consulta_form.fecha_consulta }}
+                <div class="col-md-12" style="background-color: #f7ffa4; padding: 10px; border-radius: 15px; width: 19%;">
+                    Fecha consulta {{ consulta.fecha_consulta }}
                 </div>
             </div>
             <div class="seccion-consulta">
@@ -80,8 +82,7 @@
                 </div>
             </div>
             <div class="col-md-12" style="margin-top: 20px;"> 
-                <button type="submit" class="btn btn-primary">Registrar Consulta</button>
-                <a style="margin-left: 10px;" href="{% url 'mostrar_pacientes' %}" type="button" class="btn btn-danger">Cancelar</a>
+                
             </div>
         </div>
     </form>

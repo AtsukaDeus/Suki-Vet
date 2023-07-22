@@ -58,6 +58,8 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    max-width: 93%;
+    overflow-y: auto;
 }
 
 
@@ -111,7 +113,7 @@ body {
 
 .btn-nueva-consulta{
     display: block;
-    width: 135px;
+    width: 100px;
     height: 33px;
     background-color: #61ddbe;
     padding: 4px 5px;
@@ -124,4 +126,28 @@ body {
 .btn-nueva-consulta:hover{
     background-color: #5ec5ab;
     
+}
+
+.btn-historial-consulta{
+    display: block;
+    width: 120px;
+    height: 33px;
+    background-color: #61b2dd;
+    padding: 4px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #101010;
+    border: 1.6px solid #0000008f;
+    margin-left: 10px;
+    margin-right: -1%;
+}
+
+.btn-historial-consulta:hover{
+    background-color: #5c9dbe;
+    
+}
+
+.div-consulta-opciones{
+    display: flex; 
+    align-items: center;
 }

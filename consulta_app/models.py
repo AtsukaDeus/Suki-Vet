@@ -4,7 +4,7 @@ from gestion_pacientes.models import Paciente
 
 
 class Consulta(models.Model):
-    fecha_consulta = models.DateTimeField(null=False, blank=False)
+    fecha_consulta = models.DateField(null=False, blank=False)
     motivo_consulta = models.CharField(max_length=10000,null=False)
     
     # Evaluación general:

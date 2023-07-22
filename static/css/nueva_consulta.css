@@ -28,3 +28,13 @@ textarea{
     resize: none;
 }
 
+.para-fisio{
+    display: flex; 
+    align-items: center;
+}
+
+#id_tllc{ margin-left: -3%;}
+
+.lbl_para_fisio{
+    margin-right: 10%;
+}

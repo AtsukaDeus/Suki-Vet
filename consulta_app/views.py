@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ConsultaForm
 from gestion_pacientes.models import Paciente
 from django.contrib import messages
+from .models import Consulta
 
 # Create your views here.
 def nuevaConsulta(request, id):
@@ -21,3 +22,16 @@ def nuevaConsulta(request, id):
         consulta_form = ConsultaForm()
     
     return render(request, 'consulta/nueva_consulta.html', {'consulta_form': consulta_form})
+
+
+def historialConsulta(request, id):
+    consultas = Consulta.objects.filter(id_paciente=id).order_by('-fecha_consulta')
+    
+    return render(request, 'consulta/historial.html', {'consultas': consultas, 'id': id})
+
+
+def verConsulta(request, id):
+    consulta = Consulta.objects.get(pk=id)
+    consulta_form = ConsultaForm(instance=consulta)
+    
+    return render(request, 'consulta/ver_consulta.html', {'consulta_form': consulta_form, 'consulta': consulta})

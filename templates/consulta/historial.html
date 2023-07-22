@@ -1,0 +1,39 @@
+{% extends "consulta/base.html" %}
+
+{% block volver %}<a style="margin-left: 10px; pointer-events: all;" href="{% url 'mostrar_pacientes' %}" type="button" class="btn-volver">Volver</a>{% endblock volver %}
+
+{% block contenido %}
+
+{% if consultas %}
+<div class="historial-consulta">
+    <table style="margin-left: 0%; margin-top: 0%; width: 100%;" class="table table-light">
+        <thead>
+            <tr style="border: 2px solid #0000008f;">
+                <th>Fecha</th>
+                <th>Motivo Consulta</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for consulta in consultas.values %}
+            <tr class="table-success">
+                <td style="width: 30%; background-color: #ffffffc4;">
+                    {{ consulta.fecha_consulta}}
+                </td>
+                <td>{{ consulta.motivo_consulta }}</td>
+                <td style="width: 11%;"><a href="ver_consulta/{{consulta.id}}" type="buttom" class="btn-ver-consulta">Ver</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div style="margin-top: 70px;" class="alert alert-danger" role="alert">
+    <strong>Upss!</strong> El paciente no contiene consultas ingresadas.
+</div>
+
+
+{% endif %}
+
+
+{% endblock contenido %}

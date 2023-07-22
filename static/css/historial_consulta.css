@@ -1,0 +1,55 @@
+
+
+.historial-consulta{
+    margin-top: 120px;
+    width: 72%;
+    text-align: center;
+    /* para habilitar scroll en el table al sobrepasar las filas*/
+    max-width: 93%;
+    overflow-y: auto;
+    background-color: #5bd45b85;
+    margin-left: 6%;
+    height: 73vh;
+    border-top: 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.table-success {
+    --bs-table-bg: #7dfa80d9;
+    --bs-table-border-color: #5a9b7e;
+}
+
+.btn-ver-consulta{
+    display: block;
+    width: 72px;
+    height: 33px;
+    background-color: #61ddbe;
+    padding: 4px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #101010;
+    border: 1.6px solid #0000008f;
+}
+
+.btn-ver-consulta:hover{
+    background-color: #5ec5ab;
+    
+}
+
+.btn-volver{
+    display: block;
+    width: 72px;
+    height: 36px;
+    background-color: #dd6161;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #101010;
+    border: 1.6px solid #0000008f;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.btn-volver:hover{
+    background-color: #ac4a4a;
+    
+}
